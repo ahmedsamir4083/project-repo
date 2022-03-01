@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing People</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+  <header id="home" class="">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <div class="row1"> 
+        <a class="navbar-brand style" href="/">Missing People</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+          
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="row2" >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-1">
+            <li class="nav-item">
+              <a class="nav-link  m-2 here" aria-current="page" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link m-2" aria-current="page" href="/Feeds">Feeds</a>
+            </li>
+
+            <li id="dropdown" class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle m-2" href="#" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
+                Reports
+              </a>
+              <div id="dropdowncontent" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/report/missing">Missing People</a>
+                <a class="dropdown-item" href="/report/find">Find People</a>
+              </div>
+            </li>
+
+ 
+            <li class="nav-item">
+            <a class="nav-link m-2 " aria-current="page" href="/search">search</a>
+            </li>
+
+
+          </ul>
+            </div>
+        
+<!-- 
+          <div id="regestration" class="regestration ">
+            <ul class="navbar-nav mb-2 mb-lg-0 p-1">
+              <li class="nav-item">
+                <a class="nav-link " href="../Task 1/index.html" target="_blank" id="LOG-IN">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="../Task 1/index.html" target="_blank" id="SIGN-UP">Sign Up</a>
+              </li>
+            </ul>
+          </div> -->
+
+          <div class="row3">
+          <div class="collapse navbar-collapse  right" id="navbar-list-4">
+            <div id="icon" class="icon">
+              <a href="#"><i class="fa fa-bell"></i></a>
+            </div>
+
+            <ul class="navbar-nav">
+              <li id="dropdown" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" 
+                  aria-haspopup="true" aria-expanded="false">
+                  <img src="../Task 2/img/IMG-20211022-WA0017.jpg" width="40" height="40" class="rounded-circle">
+                </a>
+                <div id="dropdowncontent" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/profile">Edit Profile</a>
+                  <a class="dropdown-item" href="/loginpage">Log Out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </nav>
+
+
+    <section class="prof-top">
+      <div class="img ">
+        <div class=" border-right d-flex flex-column align-items-center text-center ">
+          <div id="chooseimg1" class="img-prof choose-img1">
+            <label id="upload" class="custom-file-upload">
+              <input type='file' accept="image/*" onchange="loadFile(event);" />
+              <img id="imageprofilecard" src="" width="250" height="250" class="rounded-circle">
+              <i class="fa fa-cloud-upload"></i>
+            </label>
+
+          </div>
+
+          <P class="userv align-items-center "><%= user.username %> </P>
+
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+  </header>
+
+  <!-- ----------------- Edit profile ---------------------- -->
+
+  <!-- 
+<section class="prof" id="prof">
+   <div id="profile" class="container vh-100 m-top-1">
+    
+    
+    <div id="bgcolor" class="container rounded  mt-5 mb-5">
+      <div class="row ">
+  
+        <div class=" border-right">
+          <div class="p-3 py-5">
+            <div class=" align-items-center mb-4">
+              <h2 class="text-center">Edit Profile</h2>
+            </div>
+            <div class="contenir-1">
+              <div class="row mt-2">
+                <div class="col-3">
+                  <label class="labels">Name</label>
+                  <input id="fname" type="text" class="form-control input-gp" placeholder="first name" name="fname">
+                </div>
+                <div class="col-3">
+                  <label class="labels">Lastname</label>
+                  <input id="lname" type="text" class="form-control input-gp" name="lname" placeholder="last name">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-3">
+                  <label class="labels">Mobile Number</label>
+                  <input id="mobilenumber" type="tel" class="form-control input-gp" placeholder="enter phone number" name="mobilenumber">
+                </div>
+                <div class="col-3">
+                  <label class="labels">User Name</label>
+                  <input id="username" type="text" class="form-control input-gp" placeholder="enter your user name" name="username">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-3">
+                  <label class="labels">Email</label>
+                  <input id="email" type="email" class="form-control input-gp" placeholder="enter your email" name="email">
+                </div>
+                <div class="col-3">
+                  <label class="labels">Password</label>
+                  <input id="password" type="password" class="form-control input-gp" placeholder="enter your password"
+                    name="password">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-3">
+                  <label class="labels">Birthday</label>
+                  <input id="birthday" type="date" class="form-control input-gp" name="birthday">
+                </div>
+    
+                <div class="col-3">
+                  <label class="labels">National ID</label>
+                  <input id="nationalid" type="number" class="form-control input-gp" placeholder="enter your 14 number" name="nationalid">
+                </div>
+              </div>
+            </div>
+
+  
+              <fieldset data-role="controlgroup">
+                <legend>Gender</legend>
+                <label for="male">Male</label>
+                <input class="input-gp" type="radio" name="gender" id="male" value="male">
+                <label for="female">Female</label>
+                <input class="input-gp" type="radio" name="gender" id="female" value="female">
+              </fieldset>
+  
+            </div>
+  
+            <div class="mt-5 text-center">
+              <button id="update"  class="btn btn-primary profile-button" type="button">Save information</button>
+              <button id="edit" class="btn btn-primary edit-profile" type="button">Edit Profile</button>
+
+            </div>
+          </div>
+        </div>
+  
+       
+  
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+  <section class="eporf">
+
+    <div class="box-prof ">
+      <h2 class="">Edit Profile</h2>
+      <div class="container">
+        <div class="row">
+          <div class="information-prof col-12  m-2">
+            <div class="info-bg">
+              <div class="row  mt-2">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <label class="labels">Name</label>
+                  <h3><%= user.fName %> </h3>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <label class="labels">Lastname</label>
+                  <h3><%= user.lName %> </h3>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <label class="labels">Mobile Number</label>
+                  <h3><%= user.mobileNum %> </h3>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <label class="labels">User Name</label>
+                  <h3><%= user.username %> </h3>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <label class="labels">Email</label>
+                  <h3><%= user.Email %> </h3>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <label class="labels">Birthday</label>
+                  <h3><%= user.birthDate %> </h3>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <label class="labels">National ID</label>
+                  <h3>12345432567876</h3>
+                </div>
+              </div>
+
+            
+
+
+              <div class="mt-5 mb-2 text-center">
+                <button id="edit" class="btn btn-primary edit-profile" type="button">Edit Profile</button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+  s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="b-page">
+    <div class="col-12 mt-4"></div>
+    <footer>
+      <p>
+        Created with by My Team <i class="fa fa-heart"></i>
+      </p>
+    </footer>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing People</title>
+  <link rel="stylesheet" href="home/css/bootstrap.min.css">
+  <link rel="stylesheet" href="home/css/all.min.css">
+  <link rel="stylesheet" href="home/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+ <!-- ــــــــــــــــــــــــــــــــــــــــــــــــ Navbar + Top Home ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ -->
+  <header id="home" class="min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <div class="row1"> 
+        <a class="navbar-brand style" href="/">Missing People</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+          
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="row2" >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-1">
+            <li class="nav-item">
+              <a class="nav-link  m-2 here" aria-current="page" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link m-2" aria-current="page" href="/Feeds">Feeds</a>
+            </li>
+
+            <li id="dropdown" class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle m-2" href="#" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
+                Reports
+              </a>
+              <div id="dropdowncontent" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/report/missing">Missing People</a>
+                <a class="dropdown-item" href="/report/find">Find People</a>
+              </div>
+            </li>
+
+ 
+            <li class="nav-item">
+            <a class="nav-link m-2 " aria-current="page" href="/search">search</a>
+            </li>
+
+
+          </ul>
+            </div>
+        
+<!-- 
+          <div id="regestration" class="regestration ">
+            <ul class="navbar-nav mb-2 mb-lg-0 p-1">
+              <li class="nav-item">
+                <a class="nav-link " href="../Task 1/index.html" target="_blank" id="LOG-IN">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="../Task 1/index.html" target="_blank" id="SIGN-UP">Sign Up</a>
+              </li>
+            </ul>
+          </div> -->
+
+          <div class="row3">
+          <div class="collapse navbar-collapse  right" id="navbar-list-4">
+            <div id="icon" class="icon">
+              <a href="#"><i class="fa fa-bell"></i></a>
+            </div>
+
+            <ul class="navbar-nav">
+              <li id="dropdown" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" 
+                  aria-haspopup="true" aria-expanded="false">
+                  <img src="../Task 2/img/IMG-20211022-WA0017.jpg" width="40" height="40" class="rounded-circle">
+                </a>
+                <div id="dropdowncontent" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/profile">Edit Profile</a>
+                  <a class="dropdown-item" href="/logout">Log Out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="home-content vh-100 d-flex justify-content-center align-items-center">
+      <div class="">
+        <h1 class="font">*Missing Pepole*</h1>
+        <p class="font">  We Are Here To Give You Hope </p>
+      </div>
+    </div>
+  </header>
+ <!-- ــــــــــــــــــــــــــــــــــــــــــــــــ about us ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ -->
+<section class="about-page">
+  <div class="about-container ">
+    <h2>About Us</h2>
+    <div class="line"></div>
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <p>MP is an independent online platform searches for missing people in all over the world.</p>
+    <div div class="row">
+      
+        <div class="f-r  col-lg-6 col-md-6 col-sm-12">
+          <h3>Feeds</h3>
+          <div class="line line2"></div>
+          <p>If someone is missing. You can search for him manually through the tracing service, or you can use one of our services automatically by entering the data of the person you want to search for, and the best possible result will be shown. Also, make sure to search about that missing person by his image.</p>
+        </div>
+      
+        <div class="f-r col-lg-6 col-md-6 col-sm-12">
+          <h3>Report</h3>
+          <div class="line line2"></div>
+          <p>In case person is found who can't reach his family, you can use our service throw "person was found" so his family can reach him.</p>
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+<!-- _____________________contact-us________________________ -->
+
+
+  <section class="contactus">
+  <div class="contact" id="contact">
+    <div class="container">
+        <h2>Contact US</h2>
+        <div class="line"></div>
+        <div class="line line1"></div>
+        <div class="line"></div>
+
+        <form>
+            <input type="text" name="name" placeholder="Name" required class="input input-1">
+            <input type="email" name="E-mail" placeholder="Email" required class="input input-2">
+            <input type="text" name="subject" placeholder="Subject" required class="input input-3">
+            <textarea id="comments" name="message" cols="100" rows="5" placeholder="Message fo me" required 
+                class="input input-4"></textarea>
+            <input type="submit" value="Send message" class="button">
+        </form>
+    </div>
+  </section>
+
+
+  <script src="home/js/bootstrap.bundle.min.js"></script>
+  <script src="home/js/main.js"></script>
+</body>
+
+</html>

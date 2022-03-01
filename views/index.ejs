@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Missing People</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+
+        
+
+        <%= messages %>
+
+        <!-- Section Form Sign up & Log in -->
+        <section>
+            <div class="container" id="container">
+                <div class="form-container sign-up-container">
+                    <form action="/newuser" method="POST">
+                        <h1>Create Account</h1>
+                        
+                        <input type="text" name="fName" id="fName" placeholder="First Name"  required>
+                        <input type="text" name="lName" id="lName" placeholder="Last Name"  required>
+                        <input type="text" name="username" id="username" placeholder="username"  required>
+                        <input type="text" id="Email" name="Email" placeholder="Email"  required>
+                        <input type="Password" id="Password" name="Password" placeholder="Password"  required>
+                        <input type="text" id="mobileNum" name="mobileNum" placeholder="Mobile number" required>
+                        <input type="date" id="birthDate" name="birthDate" placeholder="Birth Date"  required>
+
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container LOG-IN-container">
+                    <form action="/login" method="POST">
+                        <h1>LOG IN</h1>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="/auth/google" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        </div>
+                        <input id="Email" name="Email" type="email" autocomplete="Email" required autofocus>
+                        <input type="password" name="password" id="password" placeholder="Enter your password">
+                        <a href="#">Forgot your password?</a>
+                        <button>LOG IN</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="ghost" id="login">LOG IN</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Enter your personal details and start journey with us</p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer>
+                <p>
+                    Created with by My Team <i class="fa fa-heart"></i>
+                </p>
+            </footer>
+            
+            
+
+        </section>
+
+        
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
